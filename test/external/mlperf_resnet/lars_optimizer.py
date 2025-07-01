@@ -180,12 +180,12 @@ class LARSOptimizer(optimizer_v2.OptimizerV2):
     #     use_nesterov=self.use_nesterov)
 
     mom_t = mom * self.momentum - grad * scaled_lr
-    mom_t = state_ops.assign(mom, mom_t, use_locking=False)
+    mom_t = state_Ops.STORE(mom, mom_t, use_locking=False)
     if self.use_nesterov:
       var_t = var + mom_t * self.momentum - grad * scaled_lr
     else:
       var_t = var + mom_t
-    return state_ops.assign(var, var_t, use_locking=False).op
+    return state_Ops.STORE(var, var_t, use_locking=False).op
 
   # Fallback to momentum optimizer for sparse tensors
   def _apply_sparse(self, grad, var, apply_state=None):

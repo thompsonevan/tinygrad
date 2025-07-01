@@ -50,8 +50,7 @@ class Ops(FastEnum):
 
   # load/store before math
   LOAD = auto(); STORE = auto() # noqa: E702
-  ASSIGN = auto()  # TODO: ASSIGN is STORE, remove ASSIGN
-
+  
   # tensor core math op, not elementwise
   WMMA = auto()
 

@@ -28,7 +28,7 @@ print(out) # <Tensor <UOp METAL (1,) int (<Ops.ADD: 52>, None)> on METAL with gr
 out.kernelize()
 
 print(mul) # <Tensor <UOp METAL (1,) int (<Ops.MUL: 48>, None)> on METAL with grad None>
-print(out) # <Tensor <UOp METAL (1,) int (<Ops.ASSIGN: 66>, None)> on METAL with grad None>
+print(out) # <Tensor <UOp METAL (1,) int (<Ops.STORE: 66>, None)> on METAL with grad None>
 ```
 
 The multiply Tensor stays the same because it is fused. The output Tensor's UOp becomes a new ASSIGN UOp:

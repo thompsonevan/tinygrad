@@ -168,7 +168,7 @@ UOp(Ops.ADD, dtypes.int, arg=None, src=(
 t_plus_3_plus_4.kernelize()
 print(t_plus_3_plus_4.uop)
 """
-UOp(Ops.ASSIGN, dtypes.int, arg=None, src=(
+UOp(Ops.STORE, dtypes.int, arg=None, src=(
   x0:=UOp(Ops.BUFFER, dtypes.int, arg=4, src=(
     UOp(Ops.UNIQUE, dtypes.void, arg=7, src=()),
     x2:=UOp(Ops.DEVICE, dtypes.void, arg='CPU', src=()),)),
